@@ -6,8 +6,10 @@ Repositori ini dibuat untuk memenuhi Tugas Akhir Praktikum Pemodelan Oseanografi
 # 1.1 TEORI DASAR
 # 1.1.1 Adveksi 1D
   - Persamaan Adveksi Adalah salah satu persamaan diferensial parsial yang memodelkan pergerakan suatu konsentrat dalam cairan yang mengalir, dengan asumsi konsentrat tersebut tidak mengalami proses difusi di dalam cairan. adveksi berkaitan erat dengan aktivitas atau pergerakan suatu benda dari suatu tempat ke tempat lainnya untuk waktu tertentu. persamaan adveksi merupakan bentuk khusus dari persamaan diferensial untuk hukum kekekalan.
-  Persamaan umum Adveksi 1D:
- ![image](https://user-images.githubusercontent.com/105967489/169652227-3a616af7-a6ea-490f-9d36-6529e27094c1.png)
+  - Persamaan umum Adveksi 1D:
+  
+   ![image](https://user-images.githubusercontent.com/105967489/169653103-edb6956f-b03e-469c-9e02-e6701a975fa0.png)
+
 - Dimana :
    F : Konsentrasi zat pelarut (mg/L)
    u : Kecepatan
@@ -17,10 +19,13 @@ Repositori ini dibuat untuk memenuhi Tugas Akhir Praktikum Pemodelan Oseanografi
 - FTCS (Forward in Time Central in Space)
   Metode FTCS merupakan gabungan dari selisih maju terhadap waktu dan selisih pusat terhadap ruang. Solusi FTCS juga termasuk ke dalam solusi stabil bersyarat.
 - Syarat kestabilan:
- ![image](https://user-images.githubusercontent.com/105967489/169652242-9eda8c16-5e4e-46b2-84c6-55aa71205af5.png)
+  
+  ![image](https://user-images.githubusercontent.com/105967489/169652242-9eda8c16-5e4e-46b2-84c6-55aa71205af5.png)
 - Leapfrog (CTCS)
 Metode beda hingga ini merupakan perluasan dari metode beda tengah (central difference) terhadap ruang dan waktu. Skema Leapfrog didapatkan dari turunan deret taylor, ini adalah skema konsisten. Leapfrog ini akan konsisten apabila nilai C ≤1.
- ![image](https://user-images.githubusercontent.com/105967489/169652254-2ba7ef0c-c895-49d6-b5ee-157e164542b9.png)
+  ![image](https://user-images.githubusercontent.com/105967489/169653150-24669327-c1bc-47ab-bc16-847b9d6614f0.png)
+
+
 - Upstream
  Metode ini menggunakan pendekatan beda maju untuk turunan waktu, sedangkan untuk turunan terhadap ruang dilakukan dengan melihat arah kecepatan u. jika > 0 maka turunan terhadap menggunakan pendejatan beda mundur. Sebaliknya jika u < 0 maka digunakan pendekatan beda maju. Stabilitas metode upstream adalah sebagai berikut:
 - Jika u > 0, turunan terhadap ruang menggunakan pendekatan beda mundur.
